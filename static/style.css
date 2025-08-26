@@ -1,0 +1,163 @@
+/* --- General Body & Background --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #26333d, #323740, #21214e);
+}
+
+/* --- Chat Container --- */
+.chat {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 500px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* --- Card Header --- */
+.card-header {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.user_info span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user_info p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* --- Chat Body --- */
+.msg_card_body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* --- Chat Footer --- */
+.card-footer {
+    border-radius: 0 0 15px 15px;
+    border-top: 0;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.type_msg {
+    flex: 1;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    height: 50px;
+}
+
+.type_msg:focus {
+    outline: none;
+    box-shadow: 0 0 8px #58cc71;
+}
+
+.send_btn {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #58cc71;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.send_btn:hover {
+    transform: scale(1.1);
+    background-color: #45b85a;
+}
+
+/* --- Messages --- */
+.msg_cotainer, .msg_cotainer_send {
+    padding: 12px 18px;
+    border-radius: 20px;
+    position: relative;
+    max-width: 70%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease;
+}
+
+.msg_cotainer {
+    background-color: rgba(82, 172, 255, 0.9);
+    color: #fff;
+    border-bottom-left-radius: 0;
+}
+
+.msg_cotainer_send {
+    background-color: #58cc71;
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.msg_time, .msg_time_send {
+    font-size: 10px;
+    opacity: 0.6;
+    position: absolute;
+    bottom: -15px;
+}
+
+.msg_time { left: 0; }
+.msg_time_send { right: 0; }
+
+/* --- User & Bot Images --- */
+.user_img, .user_img_msg {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.user_img { width: 70px; height: 70px; }
+.user_img_msg { width: 40px; height: 40px; }
+
+/* --- Online Indicator --- */
+.online_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.4em;
+    border: 2px solid white;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media(max-width: 576px){
+    .card { height: 100%; border-radius: 0; }
+    .msg_cotainer, .msg_cotainer_send { max-width: 85%; }
+}
