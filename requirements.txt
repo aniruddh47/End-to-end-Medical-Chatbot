@@ -11,5 +11,5 @@ langchain_experimental
 gunicorn
 groq
 langchain-groq
-huggingface_hub>=0.17.0
+huggingface_hub==0.17.0
 -e .
