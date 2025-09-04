@@ -12,4 +12,3 @@ gunicorn
 groq
 langchain-groq
 huggingface_hub==0.17.0
--e .
