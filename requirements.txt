@@ -1,5 +1,6 @@
-torch==2.2.0
-torchvision==0.17.0
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+-f https://download.pytorch.org/whl/torch_stable.html
 transformers==4.37.2
 sentence-transformers==2.2.2
 flask
